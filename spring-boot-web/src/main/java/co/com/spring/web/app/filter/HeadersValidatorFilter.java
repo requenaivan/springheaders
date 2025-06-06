@@ -36,8 +36,13 @@ public class HeadersValidatorFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		Enumeration<String> headerNames = req.getHeaderNames();
 		if (logger.isDebugEnabled()) {
-            logger.debug("HeadersValidatorFilter: test doFilter {} {}", req.getMethod(), req.getRequestURI());
+			logger.debug("HeadersValidatorFilter: test  " + req.getMethod() + " " + req.getRequestURI());
 		}
+		if(1==2){
+			logger.info("HeadersValidatorFilter: test  " + req.getMethod() + " " + req.getRequestURI());
+		}
+		String test = null;
+
 
 		if (headerNames != null) {
 			while (headerNames.hasMoreElements()) {
